@@ -4,38 +4,22 @@ import Paragraph from '../shared/Paragraph.astro'
 import Title from '../shared/Title.astro'
 ---
 
-<section id='features'>
-  <Container className='flex flex-col midmd:flex-row-reverse gap-10 lg:gap-12'>
+<section id='beneficts'>
+  <Container className='flex flex-col midmd:flex-row gap-10 lg:gap-12'>
     <div class='flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col'>
-      <Title>Impulsa tu negocio con nosotros</Title>
+      <Title>¿Qué ganarías con tu presencia en la web?</Title>
       <Paragraph className='mt-8'>
         Potenciamos tu presencia en línea para alcanzar el éxito digital.
       </Paragraph>
-      <ul class='mt-8 space-y-4 text-heading-3 font-medium'>
-        <li>
-          <span
-            class='font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center'
-            >&checkmark;</span
-          > Análisis web profesional
+      <ul class='mt-10 text-left list-disc pl-6'>
+        <li class='mb-4'>Tener la presencia digital que tu negocio necesita.</li>
+        <li class='mb-4'>Generar confianza.</li>
+        <li class='mb-4'>Destacarte de la competencia.</li>
+        <li class='mb-4'>Atraer nuevos clientes.</li>
+        <li class='mb-4'>
+          Contar con una vidriera disponible las 24 horas del día, los siete días de la semana.
         </li>
-        <li>
-          <span
-            class='font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center'
-            >&checkmark;</span
-          > Optimización gratuita
-        </li>
-        <li>
-          <span
-            class='font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center'
-            >&checkmark;</span
-          > Soluciones personalizadas
-        </li>
-        <li>
-          <span
-            class='font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center'
-            >&checkmark;</span
-          > Contenido optimizado
-        </li>
+        <li class='mb-4'>Expandir tu negocio a más ciudades e incluso a otros países.</li>
       </ul>
     </div>
 
@@ -56,7 +40,7 @@ import Title from '../shared/Title.astro'
           class='absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0'
         ></span>
         <img
-          src={'/images/undraw_web_devices_re_m8sc.svg'}
+          src={'/images/web-search.svg'}
           alt='banner image'
           width='1240'
           height='1385'

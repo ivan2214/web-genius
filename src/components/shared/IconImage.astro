@@ -1,0 +1,9 @@
+---
+type Props = {
+  alt: string
+  src: string
+}
+const { src, alt } = Astro.props
+---
+
+<img class='w-6 h-6' src={src} alt={alt} />

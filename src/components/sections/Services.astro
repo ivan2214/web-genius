@@ -1,6 +1,7 @@
 ---
 import Service from '../cards/Service.astro'
 import Container from '../shared/Container.astro'
+import IconImage from '../shared/IconImage.astro'
 import Paragraph from '../shared/Paragraph.astro'
 import Title from '../shared/Title.astro'
 ---
@@ -19,20 +20,10 @@ import Title from '../shared/Title.astro'
         description='Diseñamos y desarrollamos sitios web a medida que se adaptan a tus necesidades y objetivos comerciales.'
       >
         <span slot='icon'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='w-6 h-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            ></path>
-          </svg>
+          <IconImage
+            src='icons/code.svg'
+            alt='signo mayor que y menor que con una barra inclinada a la derecha al medio'
+          />
         </span>
       </Service>
       <Service
@@ -40,41 +31,10 @@ import Title from '../shared/Title.astro'
         description='Creamos sitios web que se adaptan y funcionan de manera óptima en dispositivos móviles, tablets y computadoras de escritorio.'
       >
         <span slot='icon'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='w-6 h-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            ></path>
-          </svg>
-        </span>
-      </Service>
-      <Service
-        title='Mobile First'
-        description='Desarrollamos tu sitio web teniendo en cuenta la experiencia del usuario en dispositivos móviles como prioridad, asegurando un diseño y rendimiento excelentes en estos dispositivos.'
-      >
-        <span slot='icon'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='w-6 h-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            ></path>
-          </svg>
+          <IconImage
+            src='icons/mobile.svg'
+            alt='signo mayor que y menor que con una barra inclinada a la derecha al medio'
+          />
         </span>
       </Service>
 
@@ -83,20 +43,10 @@ import Title from '../shared/Title.astro'
         description='Mejoramos la velocidad de carga y rendimiento de tu sitio web para garantizar una experiencia fluida y rápida.'
       >
         <span slot='icon'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='w-6 h-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            ></path>
-          </svg>
+          <IconImage
+            src='icons/settings-code.svg'
+            alt='signo mayor que y menor que con una barra inclinada a la derecha al medio'
+          />
         </span>
       </Service>
       <Service
@@ -104,20 +54,10 @@ import Title from '../shared/Title.astro'
         description='Implementamos estrategias de SEO para mejorar la visibilidad de tu sitio web en los motores de búsqueda y aumentar el tráfico orgánico.'
       >
         <span slot='icon'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='w-6 h-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            ></path>
-          </svg>
+          <IconImage
+            src='icons/seo.svg'
+            alt='signo mayor que y menor que con una barra inclinada a la derecha al medio'
+          />
         </span>
       </Service>
       <Service
@@ -125,20 +65,10 @@ import Title from '../shared/Title.astro'
         description='Creamos diseños atractivos y personalizados que reflejan la identidad de tu marca y generan una excelente impresión visual.'
       >
         <span slot='icon'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='w-6 h-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            ></path>
-          </svg>
+          <IconImage
+            src='icons/brush.svg'
+            alt='signo mayor que y menor que con una barra inclinada a la derecha al medio'
+          />
         </span>
       </Service>
       <Service
@@ -146,20 +76,10 @@ import Title from '../shared/Title.astro'
         description='Gestionamos y organizamos el contenido de tu sitio web de manera eficiente para una navegación intuitiva y una presentación efectiva.'
       >
         <span slot='icon'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='w-6 h-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            ></path>
-          </svg>
+          <IconImage
+            src='icons/file-upload.svg'
+            alt='signo mayor que y menor que con una barra inclinada a la derecha al medio'
+          />
         </span>
       </Service>
       <Service
@@ -167,20 +87,10 @@ import Title from '../shared/Title.astro'
         description='Incorporamos herramientas y funciones especiales, como formularios de contacto, integración de redes sociales, integración de sistemas de pago, entre otras, para potenciar la interacción con tus visitantes.'
       >
         <span slot='icon'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='w-6 h-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            ></path>
-          </svg>
+          <IconImage
+            src='icons/tools.svg'
+            alt='signo mayor que y menor que con una barra inclinada a la derecha al medio'
+          />
         </span>
       </Service>
       <Service
@@ -188,20 +98,10 @@ import Title from '../shared/Title.astro'
         description='Ofrecemos servicios de mantenimiento continuo y actualizaciones para garantizar que tu sitio web esté siempre actualizado y funcionando de manera óptima.'
       >
         <span slot='icon'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='w-6 h-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            ></path>
-          </svg>
+          <IconImage
+            src='icons/update.svg'
+            alt='signo mayor que y menor que con una barra inclinada a la derecha al medio'
+          />
         </span>
       </Service>
     </div>
