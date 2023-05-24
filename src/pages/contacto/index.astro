@@ -1,0 +1,105 @@
+---
+import Button from '../../components/shared/Button.astro'
+import Container from '../../components/shared/Container.astro'
+import Title from '../../components/shared/Title.astro'
+import Layout from '../../layouts/Layout.astro'
+const token = import.meta.env.TOKEN_FORMSPREE
+---
+
+<Layout title='Tu socio en desarrollo web y éxito online'>
+  <section
+    class='lg:py-5 flex-col lg:flex-row items-center w-full lg:px-10 flex lg:items-start justify-center'
+  >
+    <div class='max-w-lg w-full flex flex-col items-center lg:items-start justify-center gap-5'>
+      <Title>Formulario de contacto</Title>
+      <img
+        src='/images/contact-form.jpg'
+        alt='Hero image'
+        width='250'
+        height='250'
+        class='lg:w-full hidden lg:block lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96'
+      />
+    </div>
+    <Container>
+      <!-- component -->
+      <div class='flex items-center justify-center p-12'>
+        <div class='mx-auto w-full max-w-[550px]'>
+          <form action={`https://formspree.io/f/${token}`} method='POST'>
+            <div class='mb-10'>
+              <label
+                for='name'
+                class='mb-3 block text-base font-medium text-[#07074D] dark:text-white'
+              >
+                Nombre Completo
+              </label>
+              <input
+                type='text'
+                name='name'
+                maxlength='80'
+                id='name'
+                placeholder='Nombre Completo'
+                class='w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
+              />
+            </div>
+            <div class='mb-10'>
+              <label
+                for='email'
+                class='mb-3 block text-base font-medium text-[#07074D] dark:text-white'
+              >
+                Email
+              </label>
+              <input
+                type='email'
+                name='email'
+                maxlength='100'
+                id='email'
+                placeholder='example@domain.com'
+                class='w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
+              />
+            </div>
+            <div class='mb-10'>
+              <label
+                for='message'
+                class='mb-3 block text-base font-medium text-[#07074D] dark:text-white'
+              >
+                Mensaje
+              </label>
+              <textarea
+                rows='4'
+                name='message'
+                id='message'
+                placeholder='Escriba su mensaje Mensaje'
+                maxlength='600'
+                class='w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
+              ></textarea>
+            </div>
+            <div>
+              <Button
+                variant={'primary'}
+                className={'min-w-max text-white flex items-center justify-between gap-5'}
+              >
+                <span class='sm:flex relative z-[5]'> Contactanos</span>
+                <span class='flex relative z-[5]'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke-width='1.5'
+                    stroke='currentColor'
+                    class='w-5 h-5'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
+                    ></path>
+                  </svg>
+                </span>
+              </Button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </Container>
+  </section>
+</Layout>
