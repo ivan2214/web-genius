@@ -10,6 +10,7 @@ const token = import.meta.env.TOKEN_FORMSPREE
   <section
     class='lg:py-5 flex-col lg:flex-row items-center w-full lg:px-10 flex lg:items-start justify-center'
   >
+    <!-- puntos de colores -->
     <div class='absolute w-full lg:w-1/2 inset-y-0 lg:right-0'>
       <span
         class='absolute -left-6 md:left-56 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden'
@@ -23,6 +24,7 @@ const token = import.meta.env.TOKEN_FORMSPREE
     <div
       class='relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2'
     >
+      <!-- imange -->
     </div>
     <div class='max-w-lg w-full flex flex-col items-center lg:items-start justify-center gap-5'>
       <Title>Formulario de contacto</Title>
@@ -31,13 +33,14 @@ const token = import.meta.env.TOKEN_FORMSPREE
         alt='Hero image'
         width='250'
         height='250'
-        class='lg:w-full  lg:block lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96'
+        class='lg:w-full lg:block lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96'
       />
     </div>
+    <!-- form -->
     <Container>
       <!-- component -->
       <div class='flex items-center justify-center p-12'>
-        <div class='mx-auto w-full max-w-[550px]'>
+        <div class='mx-auto w-full max-w-[550px] z-50'>
           <form action={`https://formspree.io/f/${token}`} method='POST'>
             <div class='mb-10'>
               <label
@@ -50,6 +53,7 @@ const token = import.meta.env.TOKEN_FORMSPREE
                 type='text'
                 name='name'
                 maxlength='80'
+                required
                 id='name'
                 placeholder='Nombre Completo'
                 class='w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
@@ -66,6 +70,7 @@ const token = import.meta.env.TOKEN_FORMSPREE
                 type='email'
                 name='email'
                 maxlength='100'
+                required
                 id='email'
                 placeholder='example@domain.com'
                 class='w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
@@ -79,6 +84,7 @@ const token = import.meta.env.TOKEN_FORMSPREE
                 Mensaje
               </label>
               <textarea
+                required
                 rows='4'
                 name='message'
                 id='message'
@@ -89,6 +95,7 @@ const token = import.meta.env.TOKEN_FORMSPREE
             </div>
             <div>
               <Button
+                type='submit'
                 variant={'primary'}
                 className={'min-w-max text-white flex items-center justify-between gap-5'}
               >
