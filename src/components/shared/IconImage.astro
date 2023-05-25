@@ -2,8 +2,9 @@
 type Props = {
   alt: string
   src: string
+  clases?: string
 }
-const { src, alt } = Astro.props
+const { clases, src, alt } = Astro.props
 ---
 
-<img class='w-6 h-6' src={src} alt={alt} />
+<img class={`w-6 h-6 ${clases}`} src={src} alt={alt} />
