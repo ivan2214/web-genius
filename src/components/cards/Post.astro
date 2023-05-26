@@ -1,0 +1,33 @@
+---
+import BtnLink from '@comp/shared/BtnLink.astro'
+import Paragraph from '@comp/shared/Paragraph.astro'
+
+interface Props {
+  title: string
+  description: string
+  image: string
+  url: string
+}
+
+const { title, image, description, url } = Astro.props
+---
+
+<article
+  class='p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden'
+>
+  <span class='absolute w-32 aspect-square -top-16 -left-16 bg-primary/10 rounded-full'></span>
+  <img src={image} alt='' />
+
+  <div class='mt-6 space-y-4 relative'>
+    <a
+      href={`${url}`}
+      class='text-lg md:text-xl font-bold hover:text-gray-400 transition duration-150 text-heading-2'
+    >
+      {title}
+    </a>
+    <Paragraph className='text-gray-400 text-sm'>
+      {description}
+    </Paragraph>
+  </div>
+  <span class='absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full'></span>
+</article>

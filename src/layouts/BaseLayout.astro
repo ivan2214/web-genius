@@ -1,0 +1,96 @@
+---
+import Container from '@comp/shared/Container.astro'
+import Layout from './Layout.astro'
+import Title from '@comp/shared/Title.astro'
+import Paragraph from '@comp/shared/Paragraph.astro'
+import BtnLink from '@comp/shared/BtnLink.astro'
+// 1. La prop frontmatter da acceso al frontmatter y otros datos
+const { frontmatter } = Astro.props
+const { title, description, WhatIs, response, beneficts, content, moreInfo }: props = frontmatter
+
+interface props {
+  title: string
+  description: string
+  WhatIs: string
+  response: string
+  beneficts: Benefict[]
+  content: string
+  moreInfo: string
+}
+
+interface Benefict {
+  subtitle: string
+  description: string
+}
+---
+
+<Layout title={title}>
+  <Container>
+    <div
+      class='min-h-screen w-full flex flex-col justify-center gap-10 overflow-hidden lg:flex-row lg:gap-5 lg:justify-between'
+    >
+      <!--     <img
+        src={image}
+        alt={description}
+        class='mx-auto object-cover max-h-96 max-w-md rounded-lg'
+      /> -->
+      <div
+        class='w-full lg:w-auto px-8 prose lg:prose-xl flex flex-col gap-5 items-start justify-center'
+      >
+        <h3 class='font-bold dark:text-white text-2xl lg:text-3xl'>{title}</h3>
+        <p class='font-light dark:text-gray-200 text-base'>{description}</p>
+        <section class='flex flex-col gap-5 lg:gap-6 lg:max-w-lg items-start'>
+          <Title>Beneficios</Title>
+          <ul class='flex items-start flex-col justify-center gap-5'>
+            {
+              beneficts.map((benefict) => (
+                <div>
+                  <h3 class='font-bold dark:text-white capitalize'>{benefict.subtitle}</h3>
+                  <Paragraph className='font-light leading-9 lg:leading-6 dark:text-gray-200'>
+                    {benefict.description}
+                  </Paragraph>
+                </div>
+              ))
+            }
+          </ul>
+        </section>
+        <section class='flex flex-col gap-4 items-start max-w-3xl'>
+          <Title>
+            {WhatIs}
+          </Title>
+          <Paragraph>
+            {response}
+          </Paragraph>
+          <Paragraph>{content}</Paragraph>
+        </section>
+
+        <BtnLink variant='primary' text='Mas informacion' href={moreInfo} />
+      </div>
+      <div
+        class='max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto'
+      >
+        <div class='w-full h-80 sm:h-96 midmd:h-full relative'>
+          <div
+            class='absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50'
+          >
+          </div>
+          <div
+            class='absolute p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60'
+          >
+          </div>
+
+          <span
+            class='absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0'
+          ></span>
+          <img
+            src={'/images/web-search.svg'}
+            alt='banner image'
+            width='1240'
+            height='1385'
+            class='w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full'
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

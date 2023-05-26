@@ -1,0 +1,23 @@
+---
+import Post from '@comp/cards/Post.astro'
+import Container from '@comp/shared/Container.astro'
+import Layout from '@layouts/Layout.astro'
+const posts = await Astro.glob('./*.md')
+---
+
+<Layout title='Blog'>
+  <Container className='space-y-10 md:sapce-y-12'>
+    <section class='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
+      {
+        posts.map((post) => (
+          <Post
+            url={post?.url || '/blog'}
+            description={post.frontmatter.description}
+            image={post.frontmatter.image}
+            title={post.frontmatter.title}
+          />
+        ))
+      }
+    </section>
+  </Container>
+</Layout>
